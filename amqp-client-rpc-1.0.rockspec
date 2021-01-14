@@ -2,7 +2,7 @@ package = "amqp-client-rpc"
 version = "1.0"
 source = {
    url = "https://github.com/helmutb82/amqp-client",
-   branch = "v1.0"
+   branch = "master"
 }
 description = {
    summary = "Lua AMQP 0.9.1 client",
