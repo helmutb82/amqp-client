@@ -4,9 +4,9 @@
 -- Copyright (C) 2019 gsdenys
 --
 
-local c = require ('amqp.consts')
-local frame = require ('amqp.frame')
-local logger = require ('amqp.logger')
+local c = require ('amqprpc.consts')
+local frame = require ('amqprpc.frame')
+local logger = require ('amqprpc.logger')
 local bit = require('bit')
 
 local band = bit.band

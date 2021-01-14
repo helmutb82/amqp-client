@@ -3,7 +3,7 @@
 -- Copyright (C) 2018 4mig4
 --
 
-local logger = require('amqp.logger')
+local logger = require('amqprpc.logger')
 local bit = require('bit')
 
 local band = bit.band

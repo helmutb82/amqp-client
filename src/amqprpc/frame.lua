@@ -7,9 +7,9 @@
 -- [1].https://www.rabbitmq.com/amqp-0-9-1-reference.html
 --
 
-local c = require('amqp.consts')
-local buffer = require('amqp.buffer')
-local logger = require('amqp.logger')
+local c = require('amqprpc.consts')
+local buffer = require('amqprpc.buffer')
+local logger = require('amqprpc.logger')
 local bit = require('bit')
 
 local band = bit.band
