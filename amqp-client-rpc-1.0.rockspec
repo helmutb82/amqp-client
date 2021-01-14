@@ -1,5 +1,5 @@
 package = "amqp-client-rpc"
-version = "1.0"
+version = "v1.0"
 source = {
    url = "https://github.com/helmutb82/amqp-client",
    branch = "master"
