@@ -20,10 +20,10 @@ dependencies = {
 build = {
    type = "builtin",
    modules = {
-     ['amqprpc'] = "src/amqp/init.lua",
-     ['amqprpc.buffer'] = "src/amqp/buffer.lua",
-     ['amqprpc.consts'] = "src/amqp/consts.lua",
-     ['amqprpc.frame'] = "src/amqp/frame.lua",
-     ['amqprpc.logger'] = "src/amqp/logger.lua"
+     ['amqprpc'] = "src/amqprpc/init.lua",
+     ['amqprpc.buffer'] = "src/amqprpc/buffer.lua",
+     ['amqprpc.consts'] = "src/amqprpc/consts.lua",
+     ['amqprpc.frame'] = "src/amqprpc/frame.lua",
+     ['amqprpc.logger'] = "src/amqprpc/logger.lua"
    }
 }
