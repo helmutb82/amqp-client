@@ -3,7 +3,7 @@
 -- Copyright (C) 2018 4mig4
 -- Copyright (C) 2019 gsdenys
 --
-
+print("---------------------------------------------")
 local c = require ('amqp.consts')
 local frame = require ('amqp.frame')
 local logger = require ('amqp.logger')
@@ -709,6 +709,9 @@ function amqp:consume_loop(callback)
       end
       f_deliver, f_header = nil, nil
       logger.dbg("[body]", f.body)
+      if self.opts.consume_noloop then
+        return f.body;
+      end
     elseif f.type == c.frame.HEARTBEAT_FRAME then
       hb.last = os.time()
       logger.dbg("[heartbeat]","ping received. [ts]: ", hb.last)
