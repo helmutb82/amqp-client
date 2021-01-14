@@ -3,7 +3,7 @@
 -- Copyright (C) 2018 4mig4
 -- Copyright (C) 2019 gsdenys
 --
-print("---------------------------------------------")
+
 local c = require ('amqp.consts')
 local frame = require ('amqp.frame')
 local logger = require ('amqp.logger')
