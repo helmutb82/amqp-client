@@ -610,12 +610,23 @@ function amqp:consume_loop(callback)
   local f_deliver
   local f_header
   local status
+  local start_time = hb.last
 
   while true do
     --
     ::continue::
     --
     f, err0 = frame.consume_frame(self)
+
+    if self.opts.consume_noloop then
+      seconds_diff = os.time() - start_time
+      if seconds_diff  >= self.opts.heartbeat_max_iterations*self.opts.heartbeat then 
+        err = 'timeout'
+        logger.error("[amqp:consume_loop]", err)
+        break
+      end
+    end
+
     if not f then -- if start
       if exiting() then
         err = "exiting"
