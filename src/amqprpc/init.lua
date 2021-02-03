@@ -721,7 +721,7 @@ function amqp:consume_loop(callback)
       f_deliver, f_header = nil, nil
       logger.dbg("[body]", f.body)
       if self.opts.consume_noloop then
-        return f.body;
+        return f.body, nil;
       end
     elseif f.type == c.frame.HEARTBEAT_FRAME then
       hb.last = os.time()
